@@ -1,0 +1,105 @@
+#mojave .our-philosophy {
+	background-color: #fff;
+}
+
+#mojave .our-philosophy .our-philosophy-bg {
+	background-color: #FFF8EB;
+}
+
+#mojave .our-philosophy-title {
+	margin-top: 27px;
+	font-size: 42px;
+	line-height: 1.5;
+}
+
+#mojave .our-philosophy-body {
+	margin-top: 32px;
+}
+
+#mojave .our-philosophy p {
+	font-size: 24px;
+	font-family: Georgia, serif;
+	line-height: 1.75;
+	margin-bottom: 24px;
+}
+
+#mojave .our-philosophy .brand {
+	text-align: center;
+  margin: 10px 25px;
+}
+
+
+@media (max-width: 960px) {
+  #mojave .our-philosophy .brand {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+#mojave .our-philosophy .brand-wrapper {
+	margin-top: 43px;
+}
+
+#mojave .our-philosophy .brand-image {
+	width: 140px;
+	height: 80px;
+	background-position: center center;
+	margin: 0 auto;
+}
+
+#mojave .our-philosophy .brand-image.position {
+	background-position-x: 19px;
+}
+
+#mojave .our-philosophy .brand-image.position-small {
+	background-position-x: 0;
+}
+
+@media (max-width: 768px) {
+
+  #mojave .our-philosophy-title {
+    margin-top: 0;
+    font-size: 37px;
+    line-height: 1.18;
+  }
+
+	#mojave .our-philosophy .container {
+		margin-top: 0;
+	}
+
+	#mojave .our-philosophy-body {
+		margin-top: 0;
+	}
+
+	#mojave .our-philosophy p {
+		font-size: 16px;
+		font-family: Georgia, serif;
+		line-height: 1.8;
+		margin-left: -2px;
+		margin-bottom: 16px;
+		margin-right: 12px;
+	}
+
+	#mojave .our-philosophy .brand-wrapper {
+		margin-top: 18px;
+	}
+
+	#mojave .our-philosophy .brand-image {
+		width: 90px;
+		height: 50px;
+		background-size: contain;
+		margin: 5px 10px;
+	}
+
+	#mojave .our-philosophy .brand-image.small {
+		width: 86px;
+		height: 65px;
+	}
+}
+
+@media (max-width: 600px) {
+  #mojave .our-philosophy-title {
+    max-width: 300px;
+  }
+}
+

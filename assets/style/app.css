@@ -1,0 +1,141 @@
+/*$yellow: #edb248;*/
+/*$brown: #b88b5c;*/
+
+#mojave body, #mojave h1,
+#mojave h3, #mojave p, #mojave blockquote,
+#mojave pre, #mojave div, #mojave button {
+	font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+}
+
+h1, .h1 {
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 26.4px;
+}
+
+h3, .h3 {
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 15.4px;
+}
+
+p, .p {
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+blockquote, .blockquote {
+	font-size: 17.5px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+pre, .pre {
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+
+.mojave,
+#mojave .v-toolbar.header,
+#mojave .default-header .information {
+	background-color: #edb248;
+}
+
+#mojave .logo {
+	margin-top: 26px;
+	margin-left: 2px;
+}
+
+#mojave .logo .mojave-logo {
+	height: 49px;
+}
+
+#mojave .menu-links {
+	margin: 20px 0 0 11px;
+}
+
+#mojave .menu-links button {
+	font-weight: 600;
+	font-size: 16px;
+	padding: 0 22px;
+}
+
+#mojave .menu-links .v-btn--outline {
+	border-width: 2px;
+	height: 50px;
+	width: 136px;
+}
+
+#mojave .information .mojave-title {
+	text-align: left;
+	font-size: 62px;
+	line-height: 1;
+	font-weight: 700;
+	margin: 14px 0 0 -10px;
+	letter-spacing: 0.7px;
+}
+
+#mojave p.mojave-description {
+	margin: 14px 0 0 -11px;
+	font-size: 27px;
+	line-height: 1.52;
+	font-family: Georgia, serif;
+}
+
+.pb-64 {
+	padding-bottom: 64px!important;
+}
+
+.pb-125 {
+	padding-bottom: 125px!important;
+}
+
+@media (max-width: 375px) {
+
+	#mojave .logo {
+		margin-top: 46px;
+		margin-left: 13px;
+	}
+
+	#mojave .logo .mojave-logo {
+		height: 40px;
+	}
+
+	#mojave .menu-links {
+		margin: 0;
+	}
+
+	#mojave .mojave-hamburger {
+		margin: 0 0 9px 13px;
+	}
+
+	#mojave .mobile-title-wrapper {
+		margin-top: -13px;
+		margin-left: -4px;
+	}
+
+	#mojave .information .mojave-title {
+		font-size: 52px;
+		letter-spacing: 0.3px;
+	}
+
+	#mojave p.mojave-description {
+		margin: 17px 0 0 14px;
+		font-size: 17px;
+		line-height: 1.6;
+	}
+}
+
+

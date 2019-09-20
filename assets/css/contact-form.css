@@ -1,0 +1,207 @@
+#mojave .contact-form {
+	background: #fff;
+}
+
+#mojave .contact-form .contact-form-title {
+	font-size: 42px;
+	margin-left: 2px;
+	text-align: center;
+}
+
+#mojave .contact-form .contact-form-description {
+	font-size: 25px;
+	margin-top: -6px;
+	margin-left: 2px;
+	line-height: 1.7;
+	letter-spacing: -0.4px;
+	font-family: Georgia, serif;
+}
+
+#mojave .contact-form  .form-header {
+	font-size: 20px;
+	letter-spacing: -0.8px;
+	font-family: Georgia, serif;
+}
+
+#mojave .contact-form .custom-checkbox {
+	margin-top: 0;
+}
+
+#mojave .contact-form .v-input__slot {
+	margin-bottom: 0;
+}
+
+#mojave .contact-form .v-input--selection-controls__input {
+	margin-right: 3px;
+}
+
+#mojave .contact-form .custom-checkbox .theme--light.v-icon {
+	color: transparent;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAAEF7NTqAAAAAXNSR0IArs4c6QAAAIJJREFUKBW9UMERgCAMKx4TOJU+XFYfTqUrKKmmB0p5efZBIWlyKWGbh0NSdTj6aZVgCF5aQFi4R6D7Ml5sOk0DJGCUlNryEXON5K50RwdeyChnb5JFFCrQNbStdDMI5Np9SLx+jMncuByodXUD8VynNsw/d7epiYj9J7KdmJcRWv0E6UpKAf3LTaEAAAAASUVORK5CYII=') no-repeat center center;
+}
+
+#mojave .contact-form .custom-checkbox.v-input--is-label-active .theme--light.v-icon {
+	color: transparent;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAAEhcmxxAAAAAXNSR0IArs4c6QAAAN5JREFUKBVj/A8EDEDABCLAACTC9PVcFwMjTO7dFl8EB6QGqhisEcL59XgPWDNcD5iHRIC1/H5+hOHD3niGDzvDGf59fYZfB36jkIyGMxF+AAp9Pd/N8O1iP0QS5JP3O8L//3y44//7PfEgLhgwwBhvN3nAmGAap+U4JeCuQGOgOApNjuH/n68Mf16dYfj/+wtcCq7hz9tLDO82ezL8eX8dLPn91hKGD7vjGb7dWADkQwIfJIHipB93VjF8v7kUGEcsDIzM7Aw8JlUMLEI6IHVwgKIBLoqHAXcSHjUoUgAETIw3GApcxQAAAABJRU5ErkJggg==') no-repeat center center;
+}
+
+#mojave .contact-form .v-messages.theme--light {
+	min-height: 0;
+}
+
+#mojave .contact-form .v-label {
+	font-size: 12px;
+	font-weight: bold;
+  letter-spacing: -0.5px;
+  font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+}
+
+#mojave .contact-form .send-request {
+	display: flex;
+	margin: 0 auto;
+	border-width: 2px;
+	border-radius: 0;
+	height: 50px;
+	font-weight: 700;
+	padding: 0 13px;
+}
+
+#mojave .contact-form .v-input input,
+#mojave .contact-form .v-textarea textarea {
+	font-size: 18px;
+	font-family: Georgia, serif;
+}
+
+#mojave .contact-form .v-textarea textarea {
+	line-height: 1.5;
+}
+
+#mojave .contact-form .send-request::before {
+	color: #000;
+	opacity: 1;
+}
+
+#mojave .contact-form .send-request:hover .v-btn__content {
+	color: #fff;
+}
+
+#mojave .contact-form .checkbox-group {
+	margin-left: -2px;
+	margin-top: -2px;
+}
+
+#mojave .contact-form .checkbox-wrapper {
+	background-color: #fff;
+}
+
+#mojave .contact-form .checkbox-wrapper.selected {
+	background-color: #edb248;
+}
+
+#mojave  .v-text-field__slot .v-label,
+#mojave  .v-text-field__slot .v-label span {
+	font-size: 18px;
+	font-weight: 300;
+	font-family: Georgia, serif;
+}
+
+#mojave  .v-text-field__slot .v-label span {
+	color: #D8D8D8;
+}
+
+#mojave  .v-text-field__slot .v-label span .red-text {
+	color: red;
+}
+
+#mojave  .v-text-field__slot .v-label.error--text,
+#mojave  .v-text-field__slot .v-label.error--text span {
+	color: #dd2c00;
+}
+
+#mojave .contact-input {
+	margin-bottom: 34px;
+}
+
+#mojave .contact-form .primary--text {
+	color: #000!important;
+	caret-color: #000!important;
+}
+
+#mojave .contact-form .v-label--active {
+	color: #edb248!important;
+}
+
+#mojave .contact-form .v-text-field > .v-input__control > .v-input__slot:before,
+#mojave .contact-form .v-text-field > .v-input__control > .v-input__slot:after {
+	bottom: -8px;
+}
+
+#mojave .contact-form .v-textarea > .v-input__control > .v-input__slot:before,
+#mojave .contact-form .v-textarea > .v-input__control > .v-input__slot:after {
+	bottom: -1px;
+}
+
+#mojave .contact-form .terms {
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0;
+	font-family: Georgia, serif;
+}
+
+#mojave .contact-form .custom-divider {
+	border-color: #000;
+	border-width: 1px;
+}
+
+#mojave .contact-form .v-text-field__details {
+	padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+	#mojave .contact-form .contact-form-title {
+		font-size: 39px;
+		margin-left: 0;
+		line-height: 1.3;
+	}
+
+	#mojave .contact-form .contact-form-description {
+		font-size: 17px;
+		margin-top: 3px;
+		margin-left: 0;
+	}
+
+	#mojave .contact-form  .form-header {
+		font-size: 16px;
+	}
+
+	#mojave .contact-form .v-input--selection-controls__input {
+		margin-right: 1px;
+	}
+
+	#mojave .v-text-field__slot .v-label {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 475px) {
+	#mojave .contact-form .send-request {
+		width: 100%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	#mojave .contact-form .v-input--selection-controls__input {
+		margin-right: 6px;
+	}
+
+	#mojave .contact-input {
+		margin-bottom: 27px;
+	}
+
+	#mojave .contact-form .terms {
+		font-size: 13px;
+		text-align: left;
+	}
+}
