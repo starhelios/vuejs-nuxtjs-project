@@ -1,0 +1,116 @@
+#mojave .featured-stories .featured-stories-title {
+	font-size: 42px;
+	margin-top: 7px;
+	letter-spacing: 0.2px;
+}
+
+#mojave .featured-stories .big-article-image {
+	margin: 2px 0 0 2px;
+	width: 580px;
+	height: 380px;
+}
+
+#mojave .featured-stories .main-article {
+	margin-top: 3px;
+}
+
+#mojave .featured-stories .main-article-header {
+	font-size: 36px;
+	margin-left: 10px;
+	margin-top: -16px;
+	line-height: 1.1;
+}
+
+#mojave .featured-stories .article-description {
+	font-size: 24px;
+	line-height: 1.8;
+	margin-top: 4px;
+	margin-left: 7px;
+	margin-right: 5px;
+	font-family: Georgia, serif;
+}
+
+#mojave .featured-stories .other-article-wrapper {
+	margin-top: 33px;
+}
+
+#mojave .other-article {
+	min-width: 250px;
+}
+
+#mojave .featured-stories .other-article-header {
+	line-height: 1.4;
+	font-size: 27px;
+	font-weight: 600;
+	margin-top: 11px;
+}
+
+#mojave .featured-stories .other-article-image {
+	margin: 11px 0 0 0;
+}
+
+#mojave .featured-stories .read-more-stories {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 8px 0 0 6px;
+}
+
+#mojave .featured-stories .read-more-stories:hover {
+	cursor: pointer;
+}
+
+#mojave .featured-stories .read-stories-arrow {
+	margin: 2px 0 0 6px;
+	width: 18px;
+	height: 12px;
+	display: inline-block;
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAAEYFd0qAAAAAXNSR0IArs4c6QAAAUhJREFUKBWNUrtOw0AQ9J2tADU0RjIFDa1flcUXmA7JP0Kbhj4ViBIpEhUSNGlTQkHlBonOtPAJFpIfzBjusoYQcdLmZmfn5m7XcZx1K0kSf+DjOJ67RL7vvyhLr85cWojiAZORquu6O6sgiKKoHxEyCcPwETfekFMAr33fd1JgsFJqC7VAGULuRVFMqqr60Frvl2X5LmsWw/1etqNtRQA4TNHBmxGOWhM6wj0In3mlB/DwozhK8fjzESETzGdpRiB5iyFY4D12qmtHYNXfALNSWZZt13W9xPXHruvOwU3leP5lJI3TND1qmuaahohbxBkN+eWeIOR35lgZNNcQcFe4eeD5KvLMWcPaAQ7AOZjkwgNxyuSvhfpQMjsT4N22ba8AA9Pml2qQbv7hi9DWIfYLxAnMbFs86W0+vqrmeT6BwQwGDeLX//ATwgR6gMTxyw4AAAAASUVORK5CYII=');
+}
+
+#mojave .featured-stories .read-more-stories:hover .read-stories-arrow {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAAEYFd0qAAAAAXNSR0IArs4c6QAAAWpJREFUKBWNUrlOw0AQ3dnYzlVCA1IoaPgJPsAJgiISfAhtGhoqKhAlUiQqJBBScAqUIgUU6ZHoSAuVnXAkZm2zw6yTbDZRCtuS983M2znemLFVz+ixvpH6/bbb5ApZlnMK2j29E8XhxRQyFnj7W8pYYIkovNUMBfwHFxccphF41efAq10rH5DRp1OaBI0R85SmAtphAHw9dIL+tyg4pc2ye/9hhOZw4FXvzHHSIefhCcqV7cZvNH6fERdGM8mY+1sXoXhRJS0Rh09mUON4gkQSnmjfMvDb1c5MguVYagdtt0XNa1VXSrB8ExGB9Y4KA/+nQ3iXAzQdu9gw5cmUyEz81T3YSUbxlUoIADd5u3isEsLQc3u0NloQcGDIJVIYkCQGYOpFxunL6VRFOU5somBRbVUVoUDLsu1S3ayYBUsQa0kkL6mrymzMzKMpnT67tW0ZwjlKuWeOpYpbWTpIOW81B8fsjKFMVv2H/0bAmu+thAjUAAAAAElFTkSuQmCC');
+}
+
+@media (max-width: 768px) {
+
+	#mojave .featured-stories .featured-stories-title {
+		margin: 8px 0 0 0;
+		text-align: left;
+		font-size: 37px;
+	}
+
+	#mojave .featured-stories .article-description {
+		font-size: 16px;
+		margin: 10px 0 0 0;
+		line-height: 1.8;
+	}
+
+	#mojave .other-article-wrapper .other-article {
+		margin-top: 22px;
+	}
+
+	#mojave .other-article-wrapper .other-article:first-child .layout {
+		margin-left: 0;
+	}
+
+	#mojave .other-article-wrapper .other-article:last-child .layout {
+		margin-left: 0;
+	}
+
+	#mojave .featured-stories .other-article-wrapper {
+		margin-top: 10px;
+	}
+
+	#mojave .featured-stories .other-article-header {
+		margin: 0 0 0 0;
+		font-size: 18px;
+		line-height: 1.35;
+	}
+
+	#mojave .featured-stories .read-more-stories {
+		margin: 4px 0 0 156px;
+	}
+
+}

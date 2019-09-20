@@ -1,0 +1,187 @@
+
+#mojave .services {
+	background: #fff;
+}
+
+#mojave .services-header {
+	display: inline-block;
+	font-size: 42px;
+	line-height: 1.5;
+	/*margin-left: -17px;*/
+	margin-top: 8px;
+	color: #313131;
+}
+
+#mojave .pull-service-left-first {
+	padding-left: 2px;
+}
+
+#mojave .pull-service-left-second {
+	padding-left: 18px;
+}
+
+#mojave .pull-service-left-third {
+	padding-left: 34px;
+}
+
+#mojave .services div,
+#mojave .services-list {
+	font-family: Georgia, serif;
+	max-height: 1000px;
+	transition: max-height .3s;
+}
+
+#mojave .services-list {
+	margin-top: 4px;
+	font-size: 24px;
+	list-style: none;
+	padding-left: 0;
+}
+
+#mojave .services-list li {
+	min-width: 65px;
+	position: relative;
+	padding: 0 0 31px 30px;
+	transition: all .3s;
+}
+
+#mojave .services-list li:before {
+	content: "•";
+	font-size: 160%;
+	position: absolute;
+	top: -12px;
+	left: 5px;
+}
+
+#mojave .services div {
+	font-size: 24px;
+}
+
+#mojave .services .v-card:before,
+#mojave .services .v-list__group__items div[role=listitem]:before {
+	content: "•";
+	font-size: 160%;
+	position: absolute;
+	top: -5px;
+	left: 12px;
+}
+
+#mojave .services .v-list {
+	padding: 0;
+}
+
+#mojave .services .v-card {
+	box-shadow: none;
+}
+
+#mojave .services .theme--light.v-list .v-list__group__header {
+	background: none;
+}
+
+#mojave .services .v-list__group__items div[role=listitem] {
+	position: relative;
+}
+
+#mojave .services .v-list .v-list__tile {
+	padding-left: 36px;
+}
+
+#mojave .services .theme--light.v-list .v-list__group--active:before,
+#mojave .services .theme--light.v-list .v-list__group--active:after {
+	background: none;
+}
+
+#mojave .services .orange-text,
+#mojave .services .orange-text .v-icon.material-icons {
+	color: #EDB248
+}
+
+#mojave .services .services-list.no-height {
+	max-height: 0;
+	overflow: hidden;
+}
+
+#mojave .services .v-card.orange-dot:before,
+#mojave .services .v-card.orange-dot .v-list__group__header .v-icon,
+#mojave .services .v-card.orange-dot .mobile-tile-list .v-list__tile__title {
+	color: #EDB248
+}
+
+@media (max-width: 768px) {
+
+	#mojave .services-header {
+		font-size: 38px;
+		margin-top: 21px;
+		/*margin-left: -15px;*/
+		letter-spacing: -0.7px;
+		line-height: 1.2;
+	}
+
+	#mojave .services div {
+		font-size: 16px;
+		min-width: 130px;
+	}
+
+	#mojave .services-list {
+		margin-top: 0;
+		font-size: 16px;
+		font-family: Georgia, serif;
+		list-style: none;
+	}
+
+	#mojave .services .layout .flex:first-child .services-list {
+		margin-top: 12px;
+	}
+
+	#mojave .services-list li {
+		padding: 0 0 11px 20px;
+	}
+
+	#mojave .services-list li:before {
+		top: -8px;
+		left: 4px;
+	}
+
+	#mojave .services .v-list__group__items div[role=listitem] {
+		padding: 11px 0 0 0;
+	}
+
+	#mojave .services .v-list__group__items div[role=listitem]:before {
+		top: 4px;
+	}
+
+	#mojave .services .v-list__group:before,
+	#mojave .services .v-list__group:after {
+		height: 0;
+	}
+
+	#mojave .services .mobile-tile-list {
+		width: 120px;
+	}
+
+	#mojave .services .mobile-tile-list .v-list__tile__title {
+		line-height: 1.1;
+	}
+
+	#mojave .services .v-list__group__header__append-icon {
+		margin-right: 193px;
+		padding: 0;
+	}
+
+	#mojave .services .v-icon.material-icons {
+		font-size: 17px;
+	}
+
+	#mojave .services .v-list .v-list__tile {
+		height: auto;
+		padding-left: 28px;
+	}
+
+	#mojave .services .v-list .v-list__group__header .v-list__tile {
+		width: 143px;
+	}
+
+	#mojave .services .v-list .v-list__group__items {
+		margin: -8px 0 0 13px;
+	}
+}

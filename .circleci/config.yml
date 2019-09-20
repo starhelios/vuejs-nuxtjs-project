@@ -1,0 +1,77 @@
+version: 2
+jobs:
+
+  build:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/mojave-website
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/mojave-website
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "functions/yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn install
+      - run: yarn --cwd functions install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "functions/yarn.lock" }}
+      - run: yarn lint
+      - run: yarn generate
+      - persist_to_workspace:
+          root: .
+          paths: dist
+
+  deploy:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/mojave-website
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/mojave-website
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "functions/yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn --cwd functions lint
+      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --project "mojave-website"
+
+  contentful-deploy:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/mojave-website
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/mojave-website
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "functions/yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn install
+      - run: yarn --cwd functions install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "functions/yarn.lock" }}
+      - run: yarn --cwd functions lint
+      - run: yarn lint
+      - run: yarn generate
+      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --project "mojave-website"
+
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - build
+
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
