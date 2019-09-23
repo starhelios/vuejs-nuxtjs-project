@@ -9,8 +9,7 @@
 
 					<v-flex xs12 sm6 class="description">
 						<p v-for="(desc, k) in description"
-							:key="k"
-							:class="{'custom-text-offset': mdAndUp}">
+							:key="k">
 							{{ desc.content[0].value }}
 						</p>
 					</v-flex>
