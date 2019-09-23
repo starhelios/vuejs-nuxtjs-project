@@ -63,18 +63,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-/*
-.contact-form {
-  & input[type="checkbox"] {
-    &:checked {
-      background-color: red;
-    }
-
-    &:focus {
-
-    }
-  }
-}
-*/
-</style>
