@@ -4,7 +4,7 @@
 			<v-container pb-0>
 				<v-layout row wrap>
 					<v-flex xs12 sm6 class="heading">
-						<h1 class="mb-4">{{ heading }}</h1>							
+						<img class="mb-4" height="60px" src="/img/headings/best-practices.svg">
 					</v-flex>
 
 					<v-flex xs12 sm6 class="description">
