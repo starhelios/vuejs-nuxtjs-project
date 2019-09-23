@@ -51,7 +51,7 @@ export default {
 			font-style: italic;
 			font-weight: normal;
 			font-size: 130%;
-			font-family: serif !important;
+			font-family: Georgia, serif !important;
 		}
 	}
 

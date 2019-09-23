@@ -128,13 +128,13 @@ export default {
 		}
 
 		.article-title {
-			font-family: serif !important;
+			font-family: Georgia, serif !important;
 			font-size: 16px;
 			font-weight: bold;
 		}
 
 		.article-description {
-			font-family: serif !important;
+			font-family: Georgia, serif !important;
 			font-size: 14px;
 		}
 	}
