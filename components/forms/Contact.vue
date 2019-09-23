@@ -1,8 +1,5 @@
 <template>
-  <v-layout
-    row
-    wrap
-  >
+  <v-layout row wrap class="contact-form">
     <vue-form
       ref="form"
       class="w-100"
@@ -121,31 +118,16 @@
           </v-flex>
         </v-layout>
 
-        <v-flex>
+        <v-flex class="text-left">
           <!-- eslint-disable vue/no-v-html -->
-          <blockquote
-            :class="{'mt-2': smAndUp, 'mt-4': xs, 'px-0': xs, 'pt-2': xs, 'pl-0': true}"
-            class="blockquote terms"
-            v-html="disclaimer"
-          />
+          <blockquote v-html="disclaimer"
+                      :class="{'mt-2': smAndUp, 'mt-4': xs, 'px-0': xs, 'pt-2': xs, 'pl-0': true}"/>
         </v-flex>
 
-        <v-layout
-          row
-          wrap
-        >
-          <v-flex
-            pt-1
-            pr-0
-            pb-2
-            pl-1
-            ml-0
-            mr-0
-          >
-            <validate
-              tag="label"
-              :custom="{ disclaimerValidation }"
-            >
+        <v-layout row wrap>
+          <v-flex pt-1 pr-0 pb-2 pl-1 ml-0 mr-0>
+            <validate tag="label"
+                      :custom="{ disclaimerValidation }">
               <checkbox
                 v-model="selectedChoices"
                 name="agreement"
@@ -370,29 +352,34 @@ export default {
 </script>
 
 <style lang="scss">
-// Submit button restyling
-button.send-request[type="submit"] {
-  border-radius: 0px;
-  width: auto !important;
+.contact-form {
+  // Submit button restyling
+  button.send-request[type="submit"] {
+    border-radius: 0px;
+    width: auto !important;
 
-  &:hover {
-    &::before {
-      background-color: rgb(253,244,215) !important;
+    &:hover {
+      &::before {
+        background-color: rgb(253,244,215) !important;
+      }
+
+      & .v-btn__content {
+        color: rgb(234,180,69) !important;
+      }
     }
 
-    & .v-btn__content {
-      color: rgb(234,180,69) !important;
+    &.v-btn--disabled {
+      &::before {
+        background-color: lightgrey !important;
+      }
+
+      & .v-btn__content {
+        color: grey !important;
+      }    
     }
   }
-
-  &.v-btn--disabled {
-    &::before {
-      background-color: lightgrey !important;
-    }
-
-    & .v-btn__content {
-      color: grey !important;
-    }    
+  blockquote p {
+    font-family: serif !important;
   }
 }
 </style>
