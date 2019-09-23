@@ -111,6 +111,10 @@ export default {
       //background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAAEhcmxxAAAAAXNSR0IArs4c6QAAAN5JREFUKBVj/A8EDEDABCLAACTC9PVcFwMjTO7dFl8EB6QGqhisEcL59XgPWDNcD5iHRIC1/H5+hOHD3niGDzvDGf59fYZfB36jkIyGMxF+AAp9Pd/N8O1iP0QS5JP3O8L//3y44//7PfEgLhgwwBhvN3nAmGAap+U4JeCuQGOgOApNjuH/n68Mf16dYfj/+wtcCq7hz9tLDO82ezL8eX8dLPn91hKGD7vjGb7dWADkQwIfJIHipB93VjF8v7kUGEcsDIzM7Aw8JlUMLEI6IHVwgKIBLoqHAXcSHjUoUgAETIw3GApcxQAAAABJRU5ErkJggg==') no-repeat center center
       background url('/img/checked.png') no-repeat center center
   &-text
+    font-family serif !important
+    font-size 14px !important
+    font-weight normal
+    color black
     margin-left 10px
     line-height 20px
     width fit-content
