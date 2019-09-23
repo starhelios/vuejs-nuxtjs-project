@@ -1,94 +1,68 @@
 <template>
-  <div class="mojave-background">
-    <v-container class="pt-0 px-4 hero hero-bottom-space">
-      <v-container pa-0>
-        <v-layout wrap>
-          <v-flex
-            md12
-          >
-            <v-card-text
-              flat
-              class="mojave"
-            >
-&nbsp;
-            </v-card-text>
-          </v-flex>
-        </v-layout>
-        <v-layout
-          row
-          wrap
-        >
-          <v-flex
-            offset-xs0
-            offset-sm1
-            offset-md1
-            offset-lg2
-            offset-xl2
-            xs12
-            sm10
-            md10
-            lg8
-            xl8
-            class="hero-pixel-perfect"
-          >
-            <div class="mojave-title">
-              {{ heading }}
-            </div>
-          </v-flex>
-        </v-layout>
-        <v-layout
-          row
-          wrap
-        >
-          <v-flex
-            offset-xs0
-            offset-sm1
-            offset-md1
-            offset-lg2
-            offset-xl2
-            xs12
-            sm10
-            md10
-            lg8
-            xl8
-            class="hero-pixel-perfect"
-          >
-            <p class="mojave-description">
-              {{ description }}
-            </p>
-          </v-flex>
-        </v-layout>
-      </v-container>
+	<LayoutRow classes="header" yPadAuto>
+    <v-container>
+			<v-layout row wrap>
+				<v-flex xs12
+								sm6
+								mt-3
+								class="heading">
+					<h1 class="mb-4">{{ heading }}</h1>
+					<p>{{ description }}</p>
+				</v-flex>
+
+				<v-flex xs12
+								sm6
+								mt-3
+								class="services">
+					<h3 v-for="service in allServices">{{ service }}. </h3>
+				</v-flex>
+			</v-layout>
     </v-container>
-  </div>
+	</LayoutRow>
 </template>
+
 <script>
 import { mapGetters } from 'vuex'
+import LayoutRow from '@/components/layout/LayoutRow'
+
 export default {
-  data() {
-    return {
-      isHydrated: false
-    }
-  },
-
-  computed: {
-
-    xs() {
-      return this.isHydrated ? this.$vuetify.breakpoint.xs : false
-    },
-
-    mdAndDown() {
-      return this.isHydrated ? this.$vuetify.breakpoint.mdAndDown : false
-    },
-
+	components: {
+		LayoutRow
+	},
+  computed: {		
     ...mapGetters({
       'heading': 'hero/getHeading',
-      'description': 'hero/getDescription'
-    })
-  },
-
-  mounted() {
-    this.isHydrated = true
+			'description': 'hero/getDescription',
+     	primaryServices: 'services/getPrimaryServices',
+      secondaryServices: 'services/getSecondaryServices'
+		}),
+		allServices () {
+			return [...this.primaryServices, ...this.secondaryServices]
+		}
   }
 }
 </script>
+
+<style lang="scss">
+.header {
+	& .services {
+		& h3 {
+			display: inline;			
+			font-style: italic;
+			font-weight: normal;
+			font-size: 130%;
+			font-family: serif !important;
+		}
+	}
+
+	@media screen and (min-width: 600px) {
+		& .heading {
+			padding-right: 48px;
+		}
+
+		& .services {
+			padding-left: 48px;
+		}
+	}
+}
+</style>
