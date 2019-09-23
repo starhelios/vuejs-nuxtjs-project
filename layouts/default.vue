@@ -2,7 +2,7 @@
   <v-app id="mojave">
     <default-header class="mojave-background" />
     <hero />
-    <end-to-end-solutions />
+    <!--<end-to-end-solutions />-->
     <our-philosophy />
     <v-content class="page ">
       <v-container

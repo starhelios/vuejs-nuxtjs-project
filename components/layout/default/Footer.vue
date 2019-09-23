@@ -45,8 +45,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/css/vars.scss";
-
 .footer {
 	background-color: rgb(133, 196, 205);
 	color: white;

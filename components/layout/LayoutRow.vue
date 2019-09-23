@@ -1,5 +1,7 @@
 <template>
-	<div :class="classes" :style="styles">
+	<div class="layout-row" 
+			 :class="classes" 
+			 :style="styles">
 		<slot/>
 	</div>
 </template>
@@ -12,9 +14,13 @@
 export default {
 	name: 'LayoutRow',
 	props: {
-		yPad: {
-			type: String,
-			default: '0'
+		yPadAuto: {
+			type: Boolean,
+			default: false
+		},
+		yNoTop: {
+			type: Boolean,
+			default: false
 		},
 		classes: String
 	},
@@ -26,8 +32,18 @@ export default {
 					? 16
 					: 48
 
+			let yPad = this.yPadAuto
+				? this.$vuetify.breakpoint.name === 'xs'
+					? '16px'
+					: '48px'
+				: '0'
+
+			let yTop = this.yNoTop
+				? '0'
+				: yPad
+
 			return {
-				'padding': `${this.yPad} ${xPad}px ${this.yPad} ${xPad}px`
+				'padding': `${yTop} ${xPad}px ${yPad} ${xPad}px`
 			}
 		}
 	}
@@ -35,5 +51,16 @@ export default {
 </script>
 
 <style lang="scss">
+.layout-row {
+	& h1 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 1.3em;
+	}
 
+	& h2 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+}
 </style>
