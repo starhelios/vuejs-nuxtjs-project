@@ -379,7 +379,7 @@ export default {
     }
   }
   blockquote p {
-    font-family: serif !important;
+    font-family: Georgia, serif !important;
   }
 }
 </style>

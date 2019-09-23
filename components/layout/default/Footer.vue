@@ -72,7 +72,7 @@ export default {
 
 	& .copyright {
 		font-weight: 100;
-		font-family: serif !important;
+		font-family: Georgia, serif !important;
 
 		@media screen and (max-width: 600px) {
 			margin-top: 16px;
