@@ -5,8 +5,9 @@
 				<v-flex xs12
 								sm6
 								mt-3
-								class="heading">
-					<h1 class="mb-4">{{ heading }}</h1>
+								class="heading">					
+          <img class="d-xs-block mb-4" height="26px" src="/img/headings/domorewithless-desktop.svg">
+          <!--<img class="mb-4" height="60px" src="/img/headings/domorewithless-mobile.svg">-->
 					<p>{{ description }}</p>
 				</v-flex>
 
