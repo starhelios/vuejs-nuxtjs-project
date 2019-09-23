@@ -156,27 +156,13 @@
           </v-flex>
         </v-layout>
 
-        <v-layout
-          row
-          wrap
-        >
-          <v-flex
-            xs12
-            md12
-            mt-4
-          >
-            <v-btn
-              class="send-request"
-              mr-0
-              color="black"
-              outline
-              :disabled="(formState.$submitted && formState.$invalid) || isPending"
-              type="submit"
-            >
-              {{ isPending ? 'Sending...' : sendButton }}
-            </v-btn>
-          </v-flex>
-        </v-layout>
+        <v-btn class="send-request ma-0 mt-4"
+                dark depressed
+                color="#edb348"              
+                :disabled="(formState.$submitted && formState.$invalid) || isPending"
+                type="submit">
+          {{ isPending ? 'Sending...' : sendButton }}
+        </v-btn>
       </v-flex>
     </vue-form>
   </v-layout>
@@ -382,3 +368,31 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+// Submit button restyling
+button.send-request[type="submit"] {
+  border-radius: 0px;
+  width: auto !important;
+
+  &:hover {
+    &::before {
+      background-color: rgb(253,244,215) !important;
+    }
+
+    & .v-btn__content {
+      color: rgb(234,180,69) !important;
+    }
+  }
+
+  &.v-btn--disabled {
+    &::before {
+      background-color: lightgrey !important;
+    }
+
+    & .v-btn__content {
+      color: grey !important;
+    }    
+  }
+}
+</style>
