@@ -1,57 +1,28 @@
 <template>
-  <div class="featured-stories">
-    <v-layout
-      wrap
-      row
-      mt-5
-    >
-      <v-flex
-        offset-xs0
-        offset-sm0
-        offset-md0
-        offset-lg0
-        offset-xl0
-        :class="getTitleWrapClass()"
-      >
-        <div class="h1 featured-stories-title">
-          Articles
-        </div>
-      </v-flex>
-    </v-layout>
+	<LayoutRow classes="articles" yPadAuto>
+		<v-container>
+			<v-layout wrap row>
+				<v-flex	xs12 sm4 mb-3>
+					<h1>Articles</h1>
+				</v-flex>
 
-    <articles />
-
-    <v-layout
-      v-if="false"
-      wrap
-      row
-    >
-      <v-flex
-        offset-md10
-        md-2
-        :mt-1="mdAndUp"
-        :mt-4="smAndDown"
-        :offset-sm6="smAndDown"
-      >
-        <div
-          class="h3 read-more-stories"
-          style=""
-        >
-          read more stories <div class="read-stories-arrow" />
-        </div>
-      </v-flex>
-    </v-layout>
-  </div>
+				<v-flex xs12 sm8>
+					<articles />
+				</v-flex>
+			</v-layout>
+		</v-container>
+	</LayoutRow>
 </template>
 
 <script>
-
 import { get } from 'lodash'
 import Articles from '~/components/lists/Articles'
+import LayoutRow from '@/components/layout/LayoutRow'
 
 export default {
   components: {
-    Articles
+		Articles,
+		LayoutRow
   },
 
   head() {
@@ -98,3 +69,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.articles {
+	background-color: rgb(248, 248, 248);
+}
+</style>

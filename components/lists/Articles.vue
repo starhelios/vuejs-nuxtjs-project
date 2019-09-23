@@ -1,57 +1,21 @@
 <template>
-  <section>
-    <v-layout
-      row
-      wrap
-      class="other-article-wrapper"
-    >
-      <v-flex
-        v-for="(article, i) in articles"
-        :key="`article${i}`"
-        xs12
-        sm6
-        md4
-        lg4
-        xl4
-        offset-xs0
-        offset-sm0
-        offset-md0
-        offset-lg0
-        offset-xl0
-        class="other-article cur-p"
-      >
+  <section class="articles-list">
+    <v-layout column
+      				wrap
+      				class="other-article-wrapper">
+      <v-flex v-for="(article, i) in articles"
+        			:key="`article${i}`"
+							mb-3>
         <article>
           <nuxt-link :to="`/article/${article.slug}`">
-            <v-layout
-              column
-              class="smooth"
-              :mr-3="smAndUp"
-            >
-              <v-flex
-                align-left
-                sm11
-                md4
-                class="article-header-wrapper"
-              >
-                <div
-                  ref="articleHeaders"
-                  class="h1 other-article-header"
-                  :style="{'min-height': articleHeaderHeight+'px'}"
-                >
-                  {{ article.title }}
-                </div>
+            <v-layout row wrap>
+              <v-flex xs12 sm5 md4 class="image-container">
+                <img :src="$img(article.image)"
+                  	 :alt="article.title">
               </v-flex>
-              <v-flex
-                sm4
-                md11
-              >
-                <img
-                  class="other-article-image flex shrink"
-                  :src="$img(article.image)"
-                  :alt="article.title"
-                >
-              </v-flex>
-              <v-flex md12>
+
+              <v-flex xs12 sm6 md7 offset-sm1>
+                <h1 class="article-title mb-2">{{ article.title }}</h1>
                 <p class="article-description">
                   {{ article.description }}
                 </p>
@@ -63,6 +27,7 @@
     </v-layout>
   </section>
 </template>
+
 <script>
 import { mapGetters } from 'vuex'
 
@@ -91,15 +56,17 @@ export default {
   },
 
   mounted() {
-    this.isHydrated = true
+		this.isHydrated = true
+		/*
     this.$nextTick(function () {
       this.setArticlesHeader()
       window.addEventListener('resize', this.setArticlesHeader)
-    })
+		})
+		*/
   },
 
   methods: {
-
+		/*
     setArticlesHeader() {
       this.$refs.articleHeaders.map(function (el, index) {
         this.removeArticleHeight(index)
@@ -108,7 +75,8 @@ export default {
       this.$refs.articleHeaders.map(function (el, index) {
         this.setArticleHeight(index, this.articleHeaderHeight)
       }.bind(this))
-    },
+		},
+		*/
 
     setArticleHeight(index, value) {
       this.$refs.articleHeaders[index].style['min-height'] = value + 'px'
@@ -143,11 +111,32 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.other-article-wrapper
-  a
-    display block
-  *
-    color rgba(0,0,0,0.87)
-    text-decoration none
+<style lang="scss">
+.articles-list {
+	a {
+		color: black;
+		font-style: normal;
+		text-decoration: none;
+
+		.image-container img {
+			@media screen and (max-width: 600px) {
+				width: 100%;
+			}
+			@media screen and (min-width: 600px) {
+				width: 200px;
+			}
+		}
+
+		.article-title {
+			font-family: serif !important;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.article-description {
+			font-family: serif !important;
+			font-size: 14px;
+		}
+	}
+}
 </style>
