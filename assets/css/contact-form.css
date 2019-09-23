@@ -56,16 +56,6 @@
   font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
 }
 
-#mojave .contact-form .send-request {
-	display: flex;
-	margin: 0 auto;
-	border-width: 2px;
-	border-radius: 0;
-	height: 50px;
-	font-weight: 700;
-	padding: 0 13px;
-}
-
 #mojave .contact-form .v-input input,
 #mojave .contact-form .v-textarea textarea {
 	font-size: 18px;
