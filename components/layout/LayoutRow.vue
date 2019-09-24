@@ -30,7 +30,9 @@ export default {
 				? 8
 				: this.$vuetify.breakpoint.name === 'sm'
 					? 16
-					: 48
+					: this.$vuetify.breakpoint.width > 800
+						? (this.$vuetify.breakpoint.width - 800) / 2
+						: 48
 
 			let yPad = this.yPadAuto
 				? this.$vuetify.breakpoint.name === 'xs'
