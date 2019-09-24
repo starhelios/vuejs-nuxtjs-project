@@ -120,12 +120,8 @@ export default {
 		text-decoration: none;
 
 		.image-container {
-			@media screen and (max-width: 600px) {
-				//width: 100%;
-			}
 			@media screen and (min-width: 600px) {
 				padding-right: 24px;
-				//width: 200px;
 			}
 		}
 
