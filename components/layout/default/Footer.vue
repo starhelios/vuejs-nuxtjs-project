@@ -33,7 +33,12 @@ import LayoutRow from '@/components/layout/LayoutRow'
 export default {
 	components: {
 		LayoutRow
-	},
+  },
+  data () {
+    return {
+      allowedSocial: ['instagram', 'twitter']
+    }
+  },
   computed: {
     ...mapGetters({
       heading: 'footer/getHeading',
@@ -49,6 +54,15 @@ export default {
 	background-color: rgb(133, 196, 205);
 	color: white;
 	font-size: 110%;
+
+  // Socials
+  .instagram {
+
+  }
+
+  .twitter {
+    
+  }
 
 	@media screen and (max-width: 600px) {
 		padding-top: 36px !important;
