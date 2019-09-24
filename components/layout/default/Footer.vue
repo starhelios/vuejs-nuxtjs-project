@@ -8,13 +8,17 @@
 					</v-flex>
 
 					<v-flex xs12 sm4 class="text-xs-center">
-						<a v-for="(link, i) in links"
-							:key="`links${i}`"
-							:href="link.href"
-							target="_blank"
-							:class="{ 'ml-2': i > 0 }">
-							{{ link.text }}
-						</a>
+						<v-layout row>
+							<v-flex pt-2>
+								<a v-for="(link, i) in linksProcessed"
+									 :key="`links${i}`"
+									 :href="link.href"
+									 target="_blank"
+									 :class="{ 'ml-2': i > 0 }">
+									 <div :class="link.class"/>
+								</a>
+							</v-flex>
+						</v-layout>
 					</v-flex>
 
 					<v-flex xs12 sm4 class="text-xs-center text-md-right copyright">
@@ -44,7 +48,10 @@ export default {
       heading: 'footer/getHeading',
       copyright: 'footer/getCopyright',
       links: 'footer/getLinks'
-    })
+    }),
+		linksProcessed () {
+			return this.links.filter(link => this.allowedSocial.indexOf(link.class) >= 0)
+		}
   }
 }
 </script>
@@ -56,12 +63,27 @@ export default {
 	font-size: 110%;
 
   // Socials
-  .instagram {
+	.instagram, .twitter {
+		display: inline-block;
+		width: 100px;
+		height: 17px;
+	}
 
+  .instagram {
+		background-image: url('/img/social/instagram-white.svg');
+
+		&:hover {
+			background-image: url('/img/social/instagram-hover.svg');
+		}
   }
 
   .twitter {
-    
+		width: 70px;
+		background-image: url('/img/social/twitter-white.svg');
+
+		&:hover {
+			background-image: url('/img/social/twitter-hover.svg');
+		}    
   }
 
 	@media screen and (max-width: 600px) {
@@ -72,16 +94,6 @@ export default {
 	@media screen and (min-width: 600px) {
 		padding-top: 20px !important;
 		padding-bottom: 20px !important;
-	}
-
-	& a {
-		color: white;
-		text-decoration: none;
-		
-
-		&:hover {
-			color: rgb(251, 243, 212);
-		}
 	}
 
 	& .copyright {
