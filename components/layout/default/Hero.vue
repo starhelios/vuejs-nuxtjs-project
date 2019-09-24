@@ -6,8 +6,7 @@
 								sm6
 								mt-3
 								class="heading">					
-          <img class="d-xs-block mb-4" height="26px" src="/img/headings/domorewithless-desktop.svg">
-          <!--<img class="mb-4" height="60px" src="/img/headings/domorewithless-mobile.svg">-->
+          <img class="d-xs-block mb-4" height="26px" src="/img/headings/domorewithless-desktop.svg" alt="Do more with less">
 					<p>{{ description }}</p>
 				</v-flex>
 

@@ -3,7 +3,7 @@
 		<v-container>
 			<v-layout wrap row>
 				<v-flex	xs12 sm4 mb-3>
-					<img height="26px" src="/img/headings/articles.svg">
+					<img height="26px" src="/img/headings/articles.svg" alt="Articles">
 				</v-flex>
 
 				<v-flex xs12 sm8>
