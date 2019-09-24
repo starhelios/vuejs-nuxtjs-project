@@ -15,7 +15,7 @@
 								sm6
 								mt-3
 								class="services">
-					<h3 v-for="service in allServices">{{ service }}. </h3>
+					<h1 v-for="service in allServices">{{ service }}. </h1>
 				</v-flex>
 			</v-layout>
     </v-container>
@@ -47,7 +47,7 @@ export default {
 <style lang="scss">
 .header {
 	& .services {
-		& h3 {
+		& h1 {
 			display: inline;			
 			font-style: italic;
 			font-weight: normal;
