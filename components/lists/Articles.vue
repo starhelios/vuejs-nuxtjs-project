@@ -9,12 +9,13 @@
         <article>
           <nuxt-link :to="`/article/${article.slug}`">
             <v-layout row wrap>
-              <v-flex xs12 sm5 md4 class="image-container">
+              <v-flex xs12 sm6 md5 lg5 class="image-container">
                 <img :src="$img(article.image)"
-                  	 :alt="article.title">
+                  	 :alt="article.title"
+										 width="100%">
               </v-flex>
 
-              <v-flex xs12 sm6 md7 offset-sm1>
+              <v-flex xs12 sm6 md7 lg7>
                 <h1 class="article-title mb-2">{{ article.title }}</h1>
                 <p class="article-description">
                   {{ article.description }}
@@ -118,12 +119,13 @@ export default {
 		font-style: normal;
 		text-decoration: none;
 
-		.image-container img {
+		.image-container {
 			@media screen and (max-width: 600px) {
-				width: 100%;
+				//width: 100%;
 			}
 			@media screen and (min-width: 600px) {
-				width: 200px;
+				padding-right: 24px;
+				//width: 200px;
 			}
 		}
 
