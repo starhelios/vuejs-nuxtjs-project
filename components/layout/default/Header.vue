@@ -4,7 +4,7 @@
 			<v-container>
 				<v-layout row wrap justify-space-around align-center>
 					<v-flex>
-						<img src="/img/LogoYellow.svg">
+						<img src="/img/LogoYellow.svg" alt="Mohave logo">
 					</v-flex>
 					<v-flex class="text-xs-right">
 						<a href="#contact_us">CONTACT US</a>

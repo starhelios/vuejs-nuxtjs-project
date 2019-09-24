@@ -4,7 +4,7 @@
 			<v-container pb-0>
 				<v-layout row wrap>
 					<v-flex xs12 sm6 class="heading">
-						<img class="mb-4" height="60px" src="/img/headings/best-practices.svg">
+						<img class="mb-4" height="60px" src="/img/headings/best-practices.svg" alt="Best practices for best brands">
 					</v-flex>
 
 					<v-flex xs12 sm6 class="description">

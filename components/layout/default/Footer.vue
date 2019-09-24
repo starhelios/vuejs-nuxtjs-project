@@ -4,7 +4,7 @@
 			<v-container>
 				<v-layout row wrap justify-space-around align-center>
 					<v-flex class="hidden-xs-only pt-1">
-						<img src="/img/LogoWhite.svg">
+						<img src="/img/LogoWhite.svg" alt="Mohave logo">
 					</v-flex>
 
 					<v-flex xs12 sm4 class="text-xs-center">
