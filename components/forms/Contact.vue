@@ -1,5 +1,9 @@
 <template>
-  <v-layout row wrap class="contact-form">
+  <v-layout
+    row
+    wrap
+    class="contact-form"
+  >
     <vue-form
       ref="form"
       class="w-100"
@@ -120,14 +124,28 @@
 
         <v-flex class="text-left">
           <!-- eslint-disable vue/no-v-html -->
-          <blockquote v-html="disclaimer"
-                      :class="{'mt-2': smAndUp, 'mt-4': xs, 'px-0': xs, 'pt-2': xs, 'pl-0': true}"/>
+          <blockquote
+            :class="{'mt-2': smAndUp, 'mt-4': xs, 'px-0': xs, 'pt-2': xs, 'pl-0': true}"
+            v-html="disclaimer"
+          />
         </v-flex>
 
-        <v-layout row wrap>
-          <v-flex pt-1 pr-0 pb-2 pl-1 ml-0 mr-0>
-            <validate tag="label"
-                      :custom="{ disclaimerValidation }">
+        <v-layout
+          row
+          wrap
+        >
+          <v-flex
+            pt-1
+            pr-0
+            pb-2
+            pl-1
+            ml-0
+            mr-0
+          >
+            <validate
+              tag="label"
+              :custom="{ disclaimerValidation }"
+            >
               <checkbox
                 v-model="selectedChoices"
                 name="agreement"
@@ -138,11 +156,14 @@
           </v-flex>
         </v-layout>
 
-        <v-btn class="send-request ma-0 mt-4"
-                dark depressed
-                color="#edb348"              
-                :disabled="(formState.$submitted && formState.$invalid) || isPending"
-                type="submit">
+        <v-btn
+          class="send-request ma-0 mt-4"
+          dark
+          depressed
+          color="#edb348"
+          :disabled="(formState.$submitted && formState.$invalid) || isPending"
+          type="submit"
+        >
           {{ isPending ? 'Sending...' : sendButton }}
         </v-btn>
       </v-flex>
@@ -375,7 +396,7 @@ export default {
 
       & .v-btn__content {
         color: grey !important;
-      }    
+      }
     }
   }
   blockquote p {

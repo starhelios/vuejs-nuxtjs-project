@@ -1,22 +1,44 @@
 <template>
   <section class="articles-list">
-    <v-layout column
-      				wrap
-      				class="other-article-wrapper">
-      <v-flex v-for="(article, i) in articles"
-        			:key="`article${i}`"
-							mb-3>
+    <v-layout
+      column
+      wrap
+      class="other-article-wrapper"
+    >
+      <v-flex
+        v-for="(article, i) in articles"
+        :key="`article${i}`"
+        mb-3
+      >
         <article>
           <nuxt-link :to="`/article/${article.slug}`">
-            <v-layout row wrap>
-              <v-flex xs12 sm6 md5 lg5 class="image-container">
-                <img :src="$img(article.image)"
-                  	 :alt="article.title"
-										 width="100%">
+            <v-layout
+              row
+              wrap
+            >
+              <v-flex
+                xs12
+                sm6
+                md5
+                lg5
+                class="image-container"
+              >
+                <img
+                  :src="$img(article.image)"
+                  :alt="article.title"
+                  width="100%"
+                >
               </v-flex>
 
-              <v-flex xs12 sm6 md7 lg7>
-                <h1 class="article-title mb-2">{{ article.title }}</h1>
+              <v-flex
+                xs12
+                sm6
+                md7
+                lg7
+              >
+                <h1 class="article-title mb-2">
+                  {{ article.title }}
+                </h1>
                 <p class="article-description">
                   {{ article.description }}
                 </p>
@@ -57,8 +79,8 @@ export default {
   },
 
   mounted() {
-		this.isHydrated = true
-		/*
+    this.isHydrated = true
+    /*
     this.$nextTick(function () {
       this.setArticlesHeader()
       window.addEventListener('resize', this.setArticlesHeader)
@@ -67,7 +89,7 @@ export default {
   },
 
   methods: {
-		/*
+    /*
     setArticlesHeader() {
       this.$refs.articleHeaders.map(function (el, index) {
         this.removeArticleHeight(index)

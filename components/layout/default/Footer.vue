@@ -1,33 +1,51 @@
 <template>
-	<footer>
-		<LayoutRow classes="footer">
-			<v-container>
-				<v-layout row wrap justify-space-around align-center>
-					<v-flex class="hidden-xs-only pt-1">
-						<img src="/img/LogoWhite.svg" alt="Mohave logo">
-					</v-flex>
+  <footer>
+    <LayoutRow classes="footer">
+      <v-container>
+        <v-layout
+          row
+          wrap
+          justify-space-around
+          align-center
+        >
+          <v-flex class="hidden-xs-only pt-1">
+            <img
+              src="/img/LogoWhite.svg"
+              alt="Mohave logo"
+            >
+          </v-flex>
 
-					<v-flex xs12 sm4 class="text-xs-center">
-						<v-layout row>
-							<v-flex pt-2>
-								<a v-for="(link, i) in linksProcessed"
-									 :key="`links${i}`"
-									 :href="link.href"
-									 target="_blank"
-									 :class="{ 'ml-2': i > 0 }">
-									 <div :class="link.class"/>
-								</a>
-							</v-flex>
-						</v-layout>
-					</v-flex>
+          <v-flex
+            xs12
+            sm4
+            class="text-xs-center"
+          >
+            <v-layout row>
+              <v-flex pt-2>
+                <a
+                  v-for="(link, i) in linksProcessed"
+                  :key="`links${i}`"
+                  :href="link.href"
+                  target="_blank"
+                  :class="{ 'ml-2': i > 0 }"
+                >
+                  <div :class="link.class" />
+                </a>
+              </v-flex>
+            </v-layout>
+          </v-flex>
 
-					<v-flex xs12 sm4 class="text-xs-center text-md-right copyright">
-						{{ copyright }}
-					</v-flex>
-				</v-layout>
-			</v-container>
-		</LayoutRow>
-	</footer>
+          <v-flex
+            xs12
+            sm4
+            class="text-xs-center text-md-right copyright"
+          >
+            {{ copyright }}
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </LayoutRow>
+  </footer>
 </template>
 
 <script>
@@ -35,10 +53,10 @@ import { mapGetters } from 'vuex'
 import LayoutRow from '@/components/layout/LayoutRow'
 
 export default {
-	components: {
-		LayoutRow
+  components: {
+    LayoutRow
   },
-  data () {
+  data() {
     return {
       allowedSocial: ['instagram', 'twitter']
     }
@@ -49,9 +67,9 @@ export default {
       copyright: 'footer/getCopyright',
       links: 'footer/getLinks'
     }),
-		linksProcessed () {
-			return this.links.filter(link => this.allowedSocial.indexOf(link.class) >= 0)
-		}
+    linksProcessed() {
+      return this.links.filter(link => this.allowedSocial.indexOf(link.class) >= 0)
+    }
   }
 }
 </script>
@@ -83,7 +101,7 @@ export default {
 
 		&:hover {
 			background-image: url('/img/social/twitter-hover.svg');
-		}    
+		}
   }
 
 	@media screen and (max-width: 600px) {
@@ -102,7 +120,7 @@ export default {
 
 		@media screen and (max-width: 600px) {
 			margin-top: 16px;
-		}		
+		}
 	}
 }
 </style>

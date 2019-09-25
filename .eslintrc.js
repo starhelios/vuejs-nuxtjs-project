@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'no-tabs': 0,
     'nuxt/no-cjs-in-config': 'off',
     'vue/max-attributes-per-line': ['error', {
       'singleline': 1,

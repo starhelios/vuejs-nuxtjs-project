@@ -1,17 +1,34 @@
 <template>
-	<LayoutRow classes="articles" yPadAuto>
-		<v-container>
-			<v-layout wrap row>
-				<v-flex	xs12 sm4 mb-3>
-					<img height="26px" src="/img/headings/articles.svg" alt="Articles">
-				</v-flex>
+  <LayoutRow
+    classes="articles"
+    y-pad-auto
+  >
+    <v-container>
+      <v-layout
+        wrap
+        row
+      >
+        <v-flex
+          xs12
+          sm4
+          mb-3
+        >
+          <img
+            height="26px"
+            src="/img/headings/articles.svg"
+            alt="Articles"
+          >
+        </v-flex>
 
-				<v-flex xs12 sm8>
-					<articles />
-				</v-flex>
-			</v-layout>
-		</v-container>
-	</LayoutRow>
+        <v-flex
+          xs12
+          sm8
+        >
+          <articles />
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </LayoutRow>
 </template>
 
 <script>
@@ -21,8 +38,8 @@ import LayoutRow from '@/components/layout/LayoutRow'
 
 export default {
   components: {
-		Articles,
-		LayoutRow
+    Articles,
+    LayoutRow
   },
 
   head() {
