@@ -1,13 +1,13 @@
 <template>
   <v-app id="mojave">
-    <default-header class="mojave-background"/>
-    <hero/>
-    <our-philosophy/>
+    <default-header class="mojave-background" />
+    <hero />
+    <our-philosophy />
 
-    <nuxt/>
+    <nuxt />
 
-    <contact-form/>
-    <default-footer/>
+    <contact-form />
+    <default-footer />
   </v-app>
 </template>
 

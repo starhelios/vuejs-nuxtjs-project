@@ -1,15 +1,23 @@
 <template>
-	<v-container py-0>
-		<v-layout row
-							wrap justify-content-around
-							class="justify-space-around">
-			<v-flex v-for="(image, i) in getImages()"
-							:key="`image${i}`"
-							class="pa-1 brand shrink align-center">
-				<img height="25px" :src="getImagePath(image)">
-			</v-flex>
-		</v-layout>
-	</v-container>
+  <v-container py-0>
+    <v-layout
+      row
+      wrap
+      justify-content-around
+      class="justify-space-around"
+    >
+      <v-flex
+        v-for="(image, i) in getImages()"
+        :key="`image${i}`"
+        class="pa-1 brand shrink align-center"
+      >
+        <img
+          height="25px"
+          :src="getImagePath(image)"
+        >
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

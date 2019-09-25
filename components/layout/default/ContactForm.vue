@@ -1,17 +1,34 @@
 <template>
-  <LayoutRow classes="contact-form" yPadAuto>
-		<v-container>
-			<v-layout wrap row>
-				<v-flex	xs12 sm4 mb-3>
-					<img height="26px" src="/img/headings/contact.svg" alt="Contact mohave">
-				</v-flex>
+  <LayoutRow
+    classes="contact-form"
+    y-pad-auto
+  >
+    <v-container>
+      <v-layout
+        wrap
+        row
+      >
+        <v-flex
+          xs12
+          sm4
+          mb-3
+        >
+          <img
+            height="26px"
+            src="/img/headings/contact.svg"
+            alt="Contact mohave"
+          >
+        </v-flex>
 
-				<v-flex xs12 sm8>
-					<contact-form/>
-				</v-flex>
-			</v-layout>
-		</v-container>
-	</LayoutRow>
+        <v-flex
+          xs12
+          sm8
+        >
+          <contact-form />
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </LayoutRow>
 </template>
 
 <script>
@@ -62,4 +79,3 @@ export default {
   }
 }
 </script>
-

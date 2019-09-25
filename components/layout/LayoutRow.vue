@@ -1,9 +1,11 @@
 <template>
-	<div class="layout-row" 
-			 :class="classes" 
-			 :style="styles">
-		<slot/>
-	</div>
+  <div
+    class="layout-row"
+    :class="classes"
+    :style="styles"
+  >
+    <slot />
+  </div>
 </template>
 
 <script>
@@ -12,43 +14,46 @@
  * css classes for padding & margin. This was added only in 2.x
  */
 export default {
-	name: 'LayoutRow',
-	props: {
-		yPadAuto: {
-			type: Boolean,
-			default: false
-		},
-		yNoTop: {
-			type: Boolean,
-			default: false
-		},
-		classes: String
-	},
-	computed: {
-		styles () {
-			let xPad = this.$vuetify.breakpoint.name === 'xs'
-				? 8
-				: this.$vuetify.breakpoint.name === 'sm'
-					? 16
-					: this.$vuetify.breakpoint.width > 800
-						? (this.$vuetify.breakpoint.width - 800) / 2
-						: 48
+  name: 'LayoutRow',
+  props: {
+    yPadAuto: {
+      type: Boolean,
+      default: false
+    },
+    yNoTop: {
+      type: Boolean,
+      default: false
+    },
+    classes: {
+      type: String,
+      default: null
+    }
+  },
+  computed: {
+    styles() {
+      const xPad = this.$vuetify.breakpoint.name === 'xs'
+        ? 8
+        : this.$vuetify.breakpoint.name === 'sm'
+          ? 16
+          : this.$vuetify.breakpoint.width > 800
+            ? (this.$vuetify.breakpoint.width - 800) / 2
+            : 48
 
-			let yPad = this.yPadAuto
-				? this.$vuetify.breakpoint.name === 'xs'
-					? '16px'
-					: '48px'
-				: '0'
+      const yPad = this.yPadAuto
+        ? this.$vuetify.breakpoint.name === 'xs'
+          ? '16px'
+          : '48px'
+        : '0'
 
-			let yTop = this.yNoTop
-				? '0'
-				: yPad
+      const yTop = this.yNoTop
+        ? '0'
+        : yPad
 
-			return {
-				'padding': `${yTop} ${xPad}px ${yPad} ${xPad}px`
-			}
-		}
-	}
+      return {
+        'padding': `${yTop} ${xPad}px ${yPad} ${xPad}px`
+      }
+    }
+  }
 }
 </script>
 

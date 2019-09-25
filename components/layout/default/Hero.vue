@@ -1,24 +1,44 @@
 <template>
-	<LayoutRow classes="header" yPadAuto>
+  <LayoutRow
+    classes="header"
+    y-pad-auto
+  >
     <v-container>
-			<v-layout row wrap>
-				<v-flex xs12
-								sm6
-								mt-3
-								class="heading">					
-          <img class="d-xs-block mb-4" height="26px" src="/img/headings/domorewithless-desktop.svg" alt="Do more with less">
-					<p>{{ description }}</p>
-				</v-flex>
+      <v-layout
+        row
+        wrap
+      >
+        <v-flex
+          xs12
+          sm6
+          mt-3
+          class="heading"
+        >
+          <img
+            class="d-xs-block mb-4"
+            height="26px"
+            src="/img/headings/domorewithless-desktop.svg"
+            alt="Do more with less"
+          >
+          <p>{{ description }}</p>
+        </v-flex>
 
-				<v-flex xs12
-								sm6
-								mt-3
-								class="services">
-					<h1 v-for="service in allServices">{{ service }}. </h1>
-				</v-flex>
-			</v-layout>
+        <v-flex
+          xs12
+          sm6
+          mt-3
+          class="services"
+        >
+          <h1
+            v-for="(service, index) in allServices"
+            :key="index"
+          >
+            {{ service }}.
+          </h1>
+        </v-flex>
+      </v-layout>
     </v-container>
-	</LayoutRow>
+  </LayoutRow>
 </template>
 
 <script>
@@ -26,19 +46,19 @@ import { mapGetters } from 'vuex'
 import LayoutRow from '@/components/layout/LayoutRow'
 
 export default {
-	components: {
-		LayoutRow
-	},
-  computed: {		
+  components: {
+    LayoutRow
+  },
+  computed: {
     ...mapGetters({
       'heading': 'hero/getHeading',
-			'description': 'hero/getDescription',
-     	primaryServices: 'services/getPrimaryServices',
+      'description': 'hero/getDescription',
+      primaryServices: 'services/getPrimaryServices',
       secondaryServices: 'services/getSecondaryServices'
-		}),
-		allServices () {
-			return [...this.primaryServices, ...this.secondaryServices]
-		}
+    }),
+    allServices() {
+      return [...this.primaryServices, ...this.secondaryServices]
+    }
   }
 }
 </script>
@@ -47,7 +67,7 @@ export default {
 .header {
 	& .services {
 		& h1 {
-			display: inline;			
+			display: inline;
 			font-style: italic;
 			font-weight: normal;
 			font-size: 130%;

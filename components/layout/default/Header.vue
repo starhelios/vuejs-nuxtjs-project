@@ -1,22 +1,28 @@
 <template>
   <header>
-		<LayoutRow classes="header">
-			<v-container>
-				<v-layout row wrap justify-space-around align-center>
-					<v-flex>
-						<img src="/img/LogoYellow.svg" alt="Mohave logo">
-					</v-flex>
-					<v-flex class="text-xs-right">
-						<a href="#contact_us">CONTACT US</a>
-					</v-flex>
-				</v-layout>
-			</v-container>					
-		</LayoutRow>
+    <LayoutRow classes="header">
+      <v-container>
+        <v-layout
+          row
+          wrap
+          justify-space-around
+          align-center
+        >
+          <v-flex>
+            <img
+              src="/img/LogoYellow.svg"
+              alt="Mohave logo"
+            >
+          </v-flex>
+          <v-flex class="text-xs-right">
+            <a href="#contact_us">CONTACT US</a>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </LayoutRow>
 
-		<LayoutRow classes="header">
-
-		</LayoutRow>
-	</header>
+    <LayoutRow classes="header" />
+  </header>
 </template>
 
 <script>
@@ -25,7 +31,7 @@ import LayoutRow from '@/components/layout/LayoutRow'
 
 export default {
   components: {
-		LayoutRow
+    LayoutRow
   },
   data() {
     return {
