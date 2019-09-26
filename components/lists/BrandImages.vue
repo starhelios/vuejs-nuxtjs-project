@@ -12,13 +12,19 @@
       <img
         src="/img/companies/logos-mobile.svg"
         class="hidden-sm-and-up mb-4"
-        style="max-width: 100%"
       >
       <img
         src="/img/companies/logos-desktop.svg"
         class="hidden-xs-only"
-        style="max-width: 100%"
       >
     </v-layout>
   </v-container>
 </template>
+
+<style lang="scss">
+.brand-images {
+  & img {
+    max-width: 100%;
+  }
+}
+</style>
