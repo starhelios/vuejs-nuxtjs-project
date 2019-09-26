@@ -15,15 +15,13 @@
           class="heading"
         >
           <img
-            v-if="$vuetify.breakpoint.xsOnly"
-            class="d-xs-block mb-4"
+            class="hidden-sm-and-up mb-4"
             height="56px"
             src="/img/headings/domorewithless-mobile.svg"
             alt="Do more with less"
           >
           <img
-            v-else
-            class="d-xs-block mb-4"
+            class="hidden-xs-only mb-4"
             height="26px"
             src="/img/headings/domorewithless-desktop.svg"
             alt="Do more with less"
