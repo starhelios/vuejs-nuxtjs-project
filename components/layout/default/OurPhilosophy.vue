@@ -27,12 +27,12 @@
             sm6
             class="description"
           >
-            <p
+            <h1
               v-for="(desc, k) in description"
               :key="k"
             >
               {{ desc.content[0].value }}
-            </p>
+            </h1>
           </v-flex>
         </v-layout>
       </v-container>
@@ -78,7 +78,26 @@ export default {
 
 		& .description {
 			padding-left: 48px;
+
+      & h1 {
+        font-size: 14px !important;
+        font-style: normal;
+        font-feature-settings: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
 		}
 	}
+
+  & .description h1 {
+    font-size: 14px !important;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
 }
 </style>
