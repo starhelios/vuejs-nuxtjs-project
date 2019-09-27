@@ -10,7 +10,7 @@
         >
           <v-flex>
             <img
-              src="/img/LogoYellow.svg"
+              :src="getAsset('LogoYellow')"
               alt="Mohave logo"
             >
           </v-flex>
@@ -43,7 +43,8 @@ export default {
       'heading': 'footer/getHeading',
       'links': 'footer/getLinks',
       'menuLinks': 'header/getMenuLinks'
-    })
+    }),
+    ...mapGetters('contentful', ['getAsset'])
   },
 
   methods: {

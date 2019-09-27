@@ -10,16 +10,27 @@
       :justify-space-between="$vuetify.breakpoint.xsOnly"
     >
       <img
-        src="/img/companies/logos-mobile.svg"
+        :src="getAsset('logos-mobile')"
         class="hidden-sm-and-up mb-4"
       >
       <img
-        src="/img/companies/logos-desktop.svg"
+        :src="getAsset('logos-desktop')"
         class="hidden-xs-only"
       >
     </v-layout>
   </v-container>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'BrandImages',
+  computed: {
+    ...mapGetters('contentful', ['getAsset'])
+  }
+}
+</script>
 
 <style lang="scss">
 .brand-images {
