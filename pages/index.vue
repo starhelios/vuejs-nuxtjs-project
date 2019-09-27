@@ -15,7 +15,7 @@
         >
           <img
             height="26px"
-            src="/img/headings/articles.svg"
+            :src="getAsset('articles')"
             alt="Articles"
           >
         </v-flex>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import { get } from 'lodash'
 import Articles from '~/components/lists/Articles'
 import LayoutRow from '@/components/layout/LayoutRow'
@@ -55,6 +56,7 @@ export default {
   },
 
   computed: {
+    ...mapGetters('contentful', ['getAsset']),
     smAndDown() {
       return this.getBreakpointSafe('smAndDown')
     },
