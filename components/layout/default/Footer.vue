@@ -35,14 +35,6 @@
                     @mouseover="mouseOver(link)"
                     @mouseout="mouseOut(link)"
                   />
-                  <!--
-                  <img
-										:class="link.class"
-										:src="getAsset(link.currentImage || link.image)"
-										@mouseover="mouseOver(link)"
-										@mouseout="mouseOut(link)"/>
-										-->
-
                 </a>
               </v-flex>
             </v-layout>
@@ -87,12 +79,11 @@ export default {
   },
   methods: {
     mouseOver(link) {
+      // because this field may not exists first time we must enforce reactivity with $set
       this.$set(link, 'currentImage', link.hoverImage)
-      // link.currentImage = link.hoverImage
     },
     mouseOut(link) {
       link.currentImage = link.image
-      // console.log(link.currentImage)
     },
     getLink(asset) {
       return `url(${this.getAsset(asset)})`
