@@ -64,6 +64,7 @@ export const getHero = async () => {
   const entries = await client.getEntries({
     'content_type': 'homePage'
   })
+
   const homePage = get(entries, ['items', 0], {})
 
   return {

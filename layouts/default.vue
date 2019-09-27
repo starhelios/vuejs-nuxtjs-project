@@ -29,12 +29,6 @@ export default {
     DefaultFooter
   },
 
-  data() {
-    return {
-      isHydrated: false
-    }
-  },
-
   head() {
     return {
       meta: [
@@ -44,18 +38,6 @@ export default {
         { name: 'og:image', hid: 'og:image', content: get(this.$store.getters, ['contentful/getAssets', 'openGraphImage'], '') }
       ]
     }
-  },
-
-  computed: {
-    smAndUp() {
-      return this.isHydrated
-        ? this.$vuetify.breakpoint.smAndUp
-        : false
-    }
-  },
-
-  mounted() {
-    this.isHydrated = true
   }
 }
 </script>

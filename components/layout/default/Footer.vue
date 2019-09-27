@@ -10,7 +10,7 @@
         >
           <v-flex class="hidden-xs-only pt-1">
             <img
-              src="/img/LogoWhite.svg"
+              :src="getAsset('LogoWhite')"
               alt="Mohave logo"
             >
           </v-flex>
@@ -29,7 +29,20 @@
                   target="_blank"
                   :class="{ 'ml-2': i > 0 }"
                 >
-                  <div :class="link.class" />
+                  <div
+                    :class="link.class"
+                    :style="{ 'background-image': getLink(link.currentImage || link.image) }"
+                    @mouseover="mouseOver(link)"
+                    @mouseout="mouseOut(link)"
+                  />
+                  <!--
+                  <img
+										:class="link.class"
+										:src="getAsset(link.currentImage || link.image)"
+										@mouseover="mouseOver(link)"
+										@mouseout="mouseOut(link)"/>
+										-->
+
                 </a>
               </v-flex>
             </v-layout>
@@ -67,8 +80,22 @@ export default {
       copyright: 'footer/getCopyright',
       links: 'footer/getLinks'
     }),
+    ...mapGetters('contentful', ['getAsset']),
     linksProcessed() {
       return this.links.filter(link => this.allowedSocial.indexOf(link.class) >= 0)
+    }
+  },
+  methods: {
+    mouseOver(link) {
+      this.$set(link, 'currentImage', link.hoverImage)
+      // link.currentImage = link.hoverImage
+    },
+    mouseOut(link) {
+      link.currentImage = link.image
+      // console.log(link.currentImage)
+    },
+    getLink(asset) {
+      return `url(${this.getAsset(asset)})`
     }
   }
 }
@@ -88,19 +115,19 @@ export default {
 	}
 
   .instagram {
-		background-image: url('/img/social/instagram-white.svg');
+		//background-image: url('/img/social/instagram-white.svg');
 
 		&:hover {
-			background-image: url('/img/social/instagram-hover.svg');
+			//background-image: url('/img/social/instagram-hover.svg');
 		}
   }
 
   .twitter {
 		width: 70px;
-		background-image: url('/img/social/twitter-white.svg');
+		//background-image: url('/img/social/twitter-white.svg');
 
 		&:hover {
-			background-image: url('/img/social/twitter-hover.svg');
+			//background-image: url('/img/social/twitter-hover.svg');
 		}
   }
 

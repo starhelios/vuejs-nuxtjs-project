@@ -1,21 +1,22 @@
 /**
  * Created by nikita on 15/06/2019.
  */
-import { get } from 'lodash'
 import { getAssets, getContentfulEntities, getEntitiesList } from '~/app/contentful/fetcher'
 import { ucFirst } from '~/app/string'
 
 export const state = () => ({
   rawItems: {},
   formHeading: '',
-  assets: {
-    openGraphImage: ''
-  }
+  assets: {}
 })
 
 export const getters = {
-  getAssets(state) {
-    return state.assets
+  getAsset: state => (asset) => {
+    const found = state.assets.items.find(item => item.fields.title === asset)
+
+    return found
+      ? found.fields.file.url
+      : false
   }
 }
 
@@ -23,21 +24,7 @@ export const actions = {
   async nuxtServerInit({ commit }) {
     const assets = await getAssets()
 
-    const getById = id =>
-      item =>
-        item.sys.id === id
-
-    const openGraphImage = (() => {
-      const baseImage = assets.items
-        .find(getById('pniY7pGEg5IhdKRgPZm80'))
-
-      const image = get(baseImage, ['fields', 'file', 'url'], '')
-        .concat('?fm=png')
-
-      return 'https:'.concat(image)
-    })()
-
-    commit('setOpenGraphImage', openGraphImage)
+    commit('setAssets', assets)
 
     const output = await getContentfulEntities()
     const entitiesList = getEntitiesList()
@@ -60,7 +47,7 @@ export const mutations = {
     state.formHeading = title
   },
 
-  setOpenGraphImage(state, image) {
-    state.assets.openGraphImage = image
+  setAssets(state, assets) {
+    state.assets = assets
   }
 }

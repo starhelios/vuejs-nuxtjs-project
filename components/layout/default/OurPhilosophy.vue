@@ -17,7 +17,7 @@
             <img
               class="mb-4"
               height="60px"
-              src="/img/headings/best-practices.svg"
+              :src="getAsset('best-practices')"
               alt="Best practices for best brands"
             >
           </v-flex>
@@ -62,7 +62,8 @@ export default {
     ...mapGetters({
       'heading': 'philosophy/getHeading',
       'description': 'philosophy/getDescription'
-    })
+    }),
+    ...mapGetters('contentful', ['getAsset'])
   }
 }
 </script>

@@ -15,7 +15,7 @@
         >
           <img
             height="26px"
-            src="/img/headings/contact.svg"
+            :src="getAsset('contact')"
             alt="Contact mohave"
           >
         </v-flex>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ContactForm from '~/components/forms/Contact.vue'
 import LayoutRow from '@/components/layout/LayoutRow'
 
@@ -46,6 +47,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('contentful', ['getAsset']),
     contactForm() {
       return this.isHydrated && this.$store.state.contentful.rawItems.contactForm &&
                     this.$store.state.contentful.rawItems.contactForm.length > 0

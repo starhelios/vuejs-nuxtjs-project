@@ -17,13 +17,13 @@
           <img
             class="hidden-sm-and-up mb-4"
             height="56px"
-            src="/img/headings/domorewithless-mobile.svg"
+            :src="getAsset('domorewithless-mobile')"
             alt="Do more with less"
           >
           <img
             class="hidden-xs-only mb-4"
             height="26px"
-            src="/img/headings/domorewithless-desktop.svg"
+            :src="getAsset('domorewithless-desktop')"
             alt="Do more with less"
           >
           <p>{{ description }}</p>
@@ -62,6 +62,7 @@ export default {
       primaryServices: 'services/getPrimaryServices',
       secondaryServices: 'services/getSecondaryServices'
     }),
+    ...mapGetters('contentful', ['getAsset']),
     allServices() {
       return [...this.primaryServices, ...this.secondaryServices]
     }
