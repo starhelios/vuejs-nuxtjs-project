@@ -79,7 +79,7 @@ export default {
 
 		& .description {
       margin-top: -6px;
-      padding-left: 48px;
+      padding-left: 24px;
 
       & h1 {
         font-family: Georgia, serif !important;

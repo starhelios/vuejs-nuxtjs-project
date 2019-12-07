@@ -92,7 +92,7 @@ export default {
 		}
 
 		& .services {
-      padding-left: 48px;
+      padding-left: 24px;
       margin-top: -15px !important;
 		}
   }
