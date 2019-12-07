@@ -21,6 +21,8 @@
 	font-size: 20px;
 	letter-spacing: -0.8px;
 	font-family: Georgia, serif;
+	font-weight: 600;
+	padding: 5px;
 }
 
 #mojave .contact-form .custom-checkbox {
