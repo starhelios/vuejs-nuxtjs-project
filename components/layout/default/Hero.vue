@@ -26,13 +26,12 @@
             :src="getAsset('domorewithless-desktop')"
             alt="Do more with less"
           >
-          <p>{{ description }}</p>
+          <p class="subheading">{{ description }}</p>
         </v-flex>
 
         <v-flex
           xs12
           sm6
-          mt-3
           class="services"
         >
           <h1
@@ -73,6 +72,7 @@ export default {
 <style lang="scss">
 .header {
 	& .services {
+
 		& h1 {
 			display: inline;
 			font-style: italic;
@@ -80,7 +80,11 @@ export default {
 			font-size: 130%;
 			font-family: Georgia, serif !important;
 		}
-	}
+  }
+  
+  & .subheading {
+    font-family: Georgia, serif !important;
+  }
 
 	@media screen and (min-width: 600px) {
 		& .heading {
@@ -88,8 +92,9 @@ export default {
 		}
 
 		& .services {
-			padding-left: 48px;
+      padding-left: 48px;
+      margin-top: -15px !important;
 		}
-	}
-}
+  }
+ }
 </style>

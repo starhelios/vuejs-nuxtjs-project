@@ -78,9 +78,11 @@ export default {
 		}
 
 		& .description {
-			padding-left: 48px;
+      margin-top: -6px;
+      padding-left: 48px;
 
       & h1 {
+        font-family: Georgia, serif !important;
         font-size: 14px !important;
         font-style: normal;
         font-feature-settings: normal;
@@ -92,7 +94,7 @@ export default {
 	}
 
   & .description h1 {
-    font-size: 14px !important;
+    font-size: 15px !important;
     font-style: normal;
     font-feature-settings: normal;
     font-variant: normal;
