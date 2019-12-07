@@ -17,10 +17,11 @@
 	font-family: Georgia, serif;
 }
 
-#mojave .contact-form  .form-header {
-	font-size: 20px;
+#mojave .contact-form .form-header {
+	font-size: 16px;
 	letter-spacing: -0.8px;
 	font-family: Georgia, serif;
+	font-weight: 600;
 }
 
 #mojave .contact-form .custom-checkbox {
@@ -162,7 +163,8 @@
 	}
 
 	#mojave .contact-form  .form-header {
-		font-size: 16px;
+		font-size: 14px;
+		font-weight: 600;
 	}
 
 	#mojave .contact-form .v-input--selection-controls__input {
