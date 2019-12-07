@@ -78,9 +78,12 @@ export default {
 			font-style: italic;
 			font-weight: normal;
 			font-size: 130%;
-			font-family: Georgia, serif !important;
+      font-family: Georgia, serif !important;
+      line-height: -5px;
+      word-spacing: 0.2rem;
 		}
-	}
+  }
+  
 
 	@media screen and (min-width: 600px) {
 		& .heading {
@@ -88,7 +91,7 @@ export default {
 		}
 
 		& .services {
-			padding-left: 48px;
+			padding-left: 24px;
 		}
 	}
 }
