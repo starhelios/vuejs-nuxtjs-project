@@ -87,11 +87,11 @@ pre, .pre {
 	letter-spacing: 0.7px;
 }
 
-#mojave p.mojave-description {
+#mojave h1.mojave-description {
 	margin: 14px 0 0 -11px;
 	font-size: 27px;
 	line-height: 1.52;
-	font-family: Georgia, serif;
+	font-family: Georgia, serif !important;
 }
 
 .pb-64 {
